@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lab9.PageA">
+    <FlexLayout Direction="Column" Padding="15">
+
+        <!-- HEADER -->
+        <Label Text="Page A Header" FontSize="24" />
+
+        <!-- CONTENT -->
+        <VerticalStackLayout Spacing="20">
+
+            <!-- OneWay -->
+            <Entry x:Name="EntryOneWay" Text="Введи текст" />
+            <Label Text="{Binding Source={x:Reference EntryOneWay}, Path=Text, Mode=OneWay}" />
+
+            <!-- TwoWay -->
+            <Entry x:Name="EntryTwoWay" />
+            <Slider Minimum="0" Maximum="100"
+                    Value="{Binding Source={x:Reference EntryTwoWay}, Path=Text, Mode=TwoWay}" />
+
+            <!-- OneWayToSource -->
+            <Entry x:Name="EntrySource" />
+            <Label x:Name="LabelSource"
+                Text="{Binding Source={x:Reference EntrySource}, Path=Text, Mode=OneWayToSource}" />
+        </VerticalStackLayout>
+
+        <!-- FOOTER -->
+        <VerticalStackLayout Margin="0,20,0,0">
+            <Label Text="OneWay — Label змінюється, Entry ні" FontSize="12" TextColor="Gray"/>
+            <Label Text="TwoWay — Entry і Slider синхронізовані" FontSize="12" TextColor="Gray"/>
+            <Label Text="OneWayToSource — Label не змінюється, але передає дані в BindingSource" FontSize="12" TextColor="Gray"/>
+        </VerticalStackLayout>
+
+    </FlexLayout>
+</ContentPage>

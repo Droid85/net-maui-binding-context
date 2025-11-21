@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="lab9.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:lab9"
+    Title="lab9">
+
+    <FlyoutItem Title="Home" Icon="home.png">
+        <ShellContent ContentTemplate="{DataTemplate local:HomePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Page A" Icon="page.png">
+        <ShellContent ContentTemplate="{DataTemplate local:PageA}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Page B" Icon="page.png">
+        <ShellContent ContentTemplate="{DataTemplate local:PageB}" />
+    </FlyoutItem>
+
+</Shell>

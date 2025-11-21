@@ -1,0 +1,18 @@
+﻿using System.Globalization;
+
+namespace lab9.Converters;
+
+public class MultiplyConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        double number = System.Convert.ToDouble(value, CultureInfo.InvariantCulture);
+        double factor = System.Convert.ToDouble(parameter, CultureInfo.InvariantCulture);
+        return number * factor;
+    }
+
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        throw new NotImplementedException();
+    }
+}

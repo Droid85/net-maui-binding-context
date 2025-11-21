@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:lab9.ViewModels"
+             x:Class="lab9.HomePage">
+    <ContentPage.BindingContext>
+        <vm:HomeViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="Auto, *, Auto" Padding="15">
+
+        <!-- HEADER -->
+        <Grid Grid.Row="0" ColumnDefinitions="*, Auto" HeightRequest="60" BackgroundColor="Azure">
+            <Image Source="logo.png"
+               HeightRequest="40"
+               WidthRequest="40"
+               Aspect="AspectFit"
+               VerticalOptions="Center"
+               HorizontalOptions="Start"/>
+            <Label Text="{Binding Title}"
+               FontSize="24"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"/>
+        </Grid>
+
+        <!-- CONTENT -->
+        <StackLayout Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center">
+            <Image Source="bunner.jpg"
+               HeightRequest="100"
+               WidthRequest="201"
+               Aspect="AspectFit"
+               VerticalOptions="Start"
+               HorizontalOptions="Center"/>
+            <Label x:Name="XamlBoundLabel"
+               Text="{Binding Message}"
+               FontSize="18"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="Center"/>
+        </StackLayout>
+
+        <!-- FOOTER -->
+        <StackLayout Grid.Row="2" HeightRequest="40" VerticalOptions="End" HorizontalOptions="Center">
+            <Label Text="{Binding FooterTitle}"
+               FontSize="12"
+               TextColor="Gray"/>
+        </StackLayout>
+
+    </Grid>
+</ContentPage>

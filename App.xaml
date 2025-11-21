@@ -1,0 +1,20 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:lab9"
+             x:Class="lab9.App">
+    <Application.MainPage>
+        <Shell>
+            <ShellItem Title="Home" Icon="home.png">
+                <ShellContent ContentTemplate="{DataTemplate local:HomePage}" />
+            </ShellItem>
+            <ShellItem Title="Page A" Icon="page.png">
+                <ShellContent ContentTemplate="{DataTemplate local:PageA}" />
+            </ShellItem>
+            <ShellItem Title="Page B" Icon="page.png">
+                <ShellContent ContentTemplate="{DataTemplate local:PageB}" />
+            </ShellItem>
+        </Shell>
+    </Application.MainPage>
+
+</Application>
