@@ -9,7 +9,6 @@
 
     <Grid RowDefinitions="Auto, *, Auto" Padding="15">
 
-        <!-- HEADER -->
         <Grid Grid.Row="0" ColumnDefinitions="*, Auto" HeightRequest="60" BackgroundColor="Azure">
             <Image Source="logo.png"
                HeightRequest="40"
@@ -23,7 +22,6 @@
                HorizontalOptions="Center"/>
         </Grid>
 
-        <!-- CONTENT -->
         <StackLayout Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center">
             <Image Source="bunner.jpg"
                HeightRequest="100"
@@ -38,7 +36,6 @@
                VerticalOptions="Center"/>
         </StackLayout>
 
-        <!-- FOOTER -->
         <StackLayout Grid.Row="2" HeightRequest="40" VerticalOptions="End" HorizontalOptions="Center">
             <Label Text="{Binding FooterTitle}"
                FontSize="12"

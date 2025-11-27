@@ -8,21 +8,18 @@
     </ContentPage.Resources>
 
     <FlexLayout Direction="Column" Padding="15">
-
-        <!-- HEADER -->
         <Label Text="Page B Header" FontSize="24" />
 
-        <!-- CONTENT -->
         <VerticalStackLayout Spacing="20">
 
-            <!-- 1. Конвертер з StringFormat -->
+            <!-- Converter StringFormat -->
             <Slider x:Name="Slider1" Minimum="0" Maximum="10" />
             <Label Text="{Binding Source={x:Reference Slider1}, Path=Value,
                   Converter={StaticResource MultiplyConverter},
                   ConverterParameter=2,
                   StringFormat='Подвоєне значення: {0:F2}'}" />
 
-            <!-- 2. Два різні ConverterParameter -->
+            <!-- ConverterParameter -->
             <Slider x:Name="Slider2" Minimum="0" Maximum="10" />
             <Label Text="{Binding Source={x:Reference Slider2}, Path=Value,
                   Converter={StaticResource MultiplyConverter},
@@ -35,7 +32,6 @@
 
         </VerticalStackLayout>
 
-        <!-- FOOTER -->
         <VerticalStackLayout>
             <Label Text="Конвертери: множення значень + різні параметри" 
                    FontSize="12" TextColor="Gray"/>
